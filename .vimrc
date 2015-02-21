@@ -1,6 +1,6 @@
 "==============================
 "  vimrc
-"  2014/04/30 UTF-8 version
+"  2015/02/21 UTF-8 version
 "==============================
 
 "------------------------------
@@ -45,7 +45,7 @@ set title
 set list
 
 "listで表示される文字のフォーマットを指定する
-set listchars=eol:↲,tab:>\ ,trail:~,extends:<,precedes:❮
+set listchars=eol:<,tab:>\ ,trail:~,extends:>,precedes:<
 "trail: 行末の半角スペース
 
 "入力中のコマンドを表示する
@@ -127,7 +127,12 @@ set incsearch
 set ignorecase 
 
 
+"------------------------------
 "キーマップ変更
-inoremap <c-j> <Esc>
+"------------------------------
+"noremap  ノーマルモード＋ビジュアルモード
+"noremap! コマンドラインモード＋インサートモード
+inoremap <C-j> <Esc>
+noremap! <C-j> <Esc>
 
 
