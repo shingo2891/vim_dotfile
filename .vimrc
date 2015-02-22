@@ -2,13 +2,49 @@
 "  vimrc
 "  2015/02/21 UTF-8 version
 "==============================
+"vi互換OFF
+set nocompatible
+
+
+"------------------------------
+" NeoBundle setting
+"------------------------------
+" vim起動時のみruntimepathにneobundle.vimを追加
+if has('vim_starting')
+  set nocompatible
+  set runtimepath+=~/.vim/bundle/neobundle.vim
+endif
+
+" neobundle.vimの初期化
+call neobundle#begin(expand('~/.vim/bundle/'))
+
+" NeoBundleを更新するための設定
+NeoBundleFetch 'Shougo/neobundle.vim'
+
+" 読み込むプラグインを記載
+NeoBundle 'Shougo/unite.vim'
+NeoBundle 'Shougo/vimfiler'
+NeoBundle 'Shougo/vimproc'
+"NeoBundle 'itchyny/lightline.vim'
+NeoBundle 'scrooloose/nerdtree'
+
+
+call neobundle#end()
+
+" 読み込んだプラグインも含め、ファイルタイプの検出、
+" ファイルタイプ別プラグイン/インデントを有効化する
+"
+filetype plugin indent on
+
+" インストールのチェック
+NeoBundleCheck
+
+
+
 
 "------------------------------
 " 基本設定
 "------------------------------
-"vi互換OFF
-set nocompatible
-
 "バックアップの作成を行わない
 set nobackup
 
@@ -134,5 +170,7 @@ set ignorecase
 "noremap! コマンドラインモード＋インサートモード
 inoremap <C-j> <Esc>
 noremap! <C-j> <Esc>
+
+
 
 
