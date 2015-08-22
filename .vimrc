@@ -1,6 +1,6 @@
 "==============================
 "  vimrc
-"  2015/02/21 UTF-8 version
+"  2015/08/22 UTF-8 version
 "==============================
 "vi互換OFF
 set nocompatible
@@ -27,7 +27,7 @@ NeoBundle 'Shougo/vimfiler'
 NeoBundle 'Shougo/vimproc'
 "NeoBundle 'itchyny/lightline.vim'
 NeoBundle 'scrooloose/nerdtree'
-
+NeoBundle 'grep.vim'
 
 call neobundle#end()
 
@@ -109,6 +109,8 @@ autocmd InsertEnter * highlight StatusLine guifg=#ccdc90 guibg=#2E4340
 autocmd InsertLeave * highlight StatusLine guifg=#2E4340 guibg=#ccdc90
 augroup END
 
+"アンダーライン設定
+set cursorline
 
 "------------------------------
 " タブ
