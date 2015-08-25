@@ -13,3 +13,16 @@ $ mkdir -p ~/.vim/bundle
 $ git clone git://github.com/Shougo/neobundle.vim ~/.vim/bundle/neobundle.vim
 
 
+
+"==============================
+" Colorscheme
+"==============================
+$ mkdir ~/.vim
+$ cd ~/.vim
+$ mkdir colors
+$ git clone https://github.com/tomasr/molokai
+$ mv molokai/colors/molokai.vim ~/.vim/colors/
+$ vi ~/.vimrc
+
+
+

@@ -65,8 +65,10 @@ set hidden
 syntax enable
 
 "カラースキーマを設定
+"colorscheme molokai
 colorscheme darkblue
 "colorscheme delek
+set t_Co=256
 
 "□や○の文字があってもカーソル位置がずれないようにする
 set ambiwidth=double
