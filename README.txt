@@ -1,8 +1,31 @@
 
 README.txt
-2015/02/13
+2017/08/06
 
-Git hubテスト用ファイル
+"==============================
+" ディレクトリ構成
+"==============================
+~/
+ 　.vimrc
+ 　.vim
+  　　vim_dotfile
+  　　colors
+　　　　bundle
+
+"==============================
+" ディレクトリ作成
+"==============================
+$ mkdir -p ~/.vim
+
+
+"==============================
+" vimrc dowonload
+"==============================
+$　cd ~/.vim
+$ mkdir -p vim_dotfile
+$ git clone git://github.com/shingo2891/vim_dotfile 
+$ cp ~/.vim/vim_dotfile/.vimrc_nopulugin ~/.vimrc
+
 
 "==============================
 " NeoBundleインストール
@@ -17,9 +40,8 @@ $ git clone git://github.com/Shougo/neobundle.vim ~/.vim/bundle/neobundle.vim
 "==============================
 " Colorscheme
 "==============================
-$ mkdir ~/.vim
 $ cd ~/.vim
-$ mkdir colors
+$ mkdir -p colors
 $ git clone https://github.com/tomasr/molokai
 $ mv molokai/colors/molokai.vim ~/.vim/colors/
 $ vi ~/.vimrc
